@@ -2,7 +2,10 @@
 <html lang="en">
 <head>
   <!-- Title -->
-  <title>Coming Soon | CIRATAS</title>
+  <title>CIRATAS | HOA Tax & Assurance</title>
+
+  <!-- CSS Global Compulsory -->
+  <link rel="stylesheet" href="assets/vendor/bootstrap/bootstrap.css">
 
   <!-- Required Meta Tags Always Come First -->
   <meta charset="utf-8">
@@ -11,36 +14,176 @@
   <!-- Favicon -->
   <link rel="shortcut icon" href="favicon.ico?">
 
-  <!-- Google Fonts -->
-  <link href="//fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
-
   <!-- CSS Implementing Plugins -->
   <link rel="stylesheet" href="assets/vendor/font-awesome/css/all.min.css">
+  <link rel="stylesheet" href="assets/vendor/hs-megamenu/src/hs.megamenu.css">
+  <link rel="stylesheet" href="assets/vendor/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.css">
   <link rel="stylesheet" href="assets/vendor/custombox/dist/custombox.min.css">
   <link rel="stylesheet" href="assets/vendor/animate.css/animate.min.css">
+  <link rel="stylesheet" href="assets/vendor/fancybox/jquery.fancybox.css">
+  <link rel="stylesheet" href="assets/vendor/slick-carousel/slick/slick.css">
 
   <!-- CSS Space Template -->
   <link rel="stylesheet" href="assets/css/theme.css">
 </head>
 
 <body>
+  <!-- Skippy -->
+  <a id="skippy" class="sr-only sr-only-focusable u-skippy" href="#content">
+    <div class="container">
+      <span class="u-skiplink-text">Skip to main content</span>
+    </div>
+  </a>
+  <!-- End Skippy -->
 
   <!-- ========== HEADER ========== -->
-  <header id="header" class="u-header u-header--abs-top">
-    <div class="u-header__section bg-transparent border-0">
+  <header id="header" class="u-header u-header--modern u-header--bordered u-header--sticky-top-lg">
+    <div class="u-header__section">
       <div id="logoAndNav" class="container-fluid">
         <!-- Nav -->
-        <nav class="navbar navbar-expand justify-content-between u-header__navbar py-3">
+        <nav class="js-mega-menu navbar navbar-expand-lg u-header__navbar">
           <!-- Logo -->
-          <div class="col-4 col-sm-6">
-            <a class="navbar-brand u-header__navbar-brand" href="index.html" aria-label="Space">
+          <div class="u-header__navbar-brand-wrapper">
+            <a class="navbar-brand u-header__navbar-brand" href="index.html" aria-label="CIRATAS">
               <img class="u-header__navbar-brand-default" src="assets/svg/logos/logo.svg" alt="Logo">
               <img class="u-header__navbar-brand-mobile" src="assets/svg/logos/logo-short.svg" alt="Logo">
-
             </a>
           </div>
           <!-- End Logo -->
 
+          <!-- Responsive Toggle Button -->
+          <button type="button" class="navbar-toggler btn u-hamburger u-header__hamburger"
+                  aria-label="Toggle navigation"
+                  aria-expanded="false"
+                  aria-controls="navBar"
+                  data-toggle="collapse"
+                  data-target="#navBar">
+            <span class="d-none d-sm-inline-block">Menu</span>
+            <span id="hamburgerTrigger" class="u-hamburger__box ml-3">
+              <span class="u-hamburger__inner"></span>
+            </span>
+          </button>
+          <!-- End Responsive Toggle Button -->
+
+          <!-- Navigation -->
+          <div id="navBar" class="collapse navbar-collapse u-header__navbar-collapse py-0">
+            <ul class="navbar-nav u-header__navbar-nav">
+             <!-- Services -->
+              <li class="nav-item hs-has-sub-menu u-header__nav-item"
+                  data-event="hover"
+                  data-animation-in="fadeInUp"
+                  data-animation-out="fadeOut">
+                <a id="shopMegaMenu" class="nav-link u-header__nav-link" href="javascript:;"
+                   aria-haspopup="true"
+                   aria-expanded="false"
+                   aria-labelledby="servicesSubMenu">
+                  Services
+                  <i class="fa fa-angle-down u-header__nav-link-icon"></i>
+                </a>
+
+                <!-- Services - Submenu -->
+                <ul id="servicesSubMenu" class="list-inline hs-sub-menu u-header__sub-menu mb-0" style="min-width: 220px;"
+                    aria-labelledby="servicesMegaMenu">
+                  <li class="dropdown-item u-header__sub-menu-list-item py-0">
+                    <a class="nav-link u-header__sub-menu-nav-link" href="html/pages/comingsoon.html">Assurance</a>
+                  </li>
+                  <li class="dropdown-item u-header__sub-menu-list-item py-0">
+                    <a class="nav-link u-header__sub-menu-nav-link" href="html/pages/comingsoon.html">Tax</a>
+                  </li>
+                  <li class="dropdown-item u-header__sub-menu-list-item py-0">
+                    <a class="nav-link u-header__sub-menu-nav-link" href="html/pages/comingsoon.html">Consulting</a>
+                  </li>
+                </ul>
+              </li>
+              <!-- End Services -->
+
+
+              <!-- AboutUs -->
+              <li class="nav-item hs-has-sub-menu u-header__nav-item"
+                  data-event="hover"
+                  data-animation-in="fadeInUp"
+                  data-animation-out="fadeOut">
+                <a id="docsMegaMenu" class="nav-link u-header__nav-link" href="javascript:;"
+                   aria-haspopup="true"
+                   aria-expanded="false"
+                   aria-labelledby="docsSubMenu">
+                  About Us
+                  <i class="fa fa-angle-down u-header__nav-link-icon"></i>
+                </a>
+
+                <!-- About Us - Submenu -->
+                <ul id="docsSubMenu" class="list-inline hs-sub-menu u-header__sub-menu mb-0" style="min-width: 260px;"
+                    aria-labelledby="docsMegaMenu">
+                  <li class="dropdown-item u-header__sub-menu-list-item py-0">
+                    <a class="nav-link d-block u-header__sub-menu-nav-link" href="html/pages/comingsoon.html">
+                      <div class="media align-items-center">
+                        <img class="max-width-5 mr-3" src="assets/svg/components/user-info-dark-icon.svg" alt="Image Description">
+                        <div class="media-body">
+                          <span class="d-block text-dark font-weight-medium">History</span>
+                          <small class="d-block">Our Experience</small>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="dropdown-item u-header__sub-menu-list-item py-0">
+                    <a class="nav-link d-block u-header__sub-menu-nav-link" href="html/pages/comingsoon.html">
+                      <div class="media align-items-center">
+                        <img class="max-width-5 mr-3" src="assets/svg/components/team-dark-icon.svg" alt="Image Description">
+                        <div class="media-body">
+                          <span class="d-block text-dark font-weight-medium">Our Team</span>
+                          <small class="d-block">Meet Our Team</small>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <!-- End Docs -->
+
+ 
+              <!-- Button -->
+              <li class="nav-item u-header__nav-item-btn">
+                <a class="btn btn-sm btn-primary" href="http://app.ciratas.com" role="button"
+                  <i class="fa fa-user-circle mr-1"></i>
+                  SignIn
+                </a>
+              </li>
+              <!-- End Button -->
+
+              <!-- Search -->
+              <li class="nav-item u-header__navbar-icon u-header__navbar-v-divider">
+                <a class="btn btn-xs btn-icon btn-text-dark u-header__search-toggle" href="javascript:;" role="button"
+                   aria-haspopup="true"
+                   aria-expanded="false"
+                   aria-controls="search"
+                   data-unfold-target="#search"
+                   data-unfold-hide-on-scroll="false"
+                   data-unfold-type="css-animation"
+                   data-unfold-duration="300"
+                   data-unfold-delay="300"
+                   data-unfold-animation-in="slideInUp">
+                  <i class="fa fa-search btn-icon__inner"></i>
+                </a>
+
+                <!-- Input -->
+                <form id="search" class="js-focus-state input-group form u-header__search u-unfold--css-animation u-unfold--hidden">
+                  <input class="form-control form__input" type="search" placeholder="Search Space">
+                  <div class="input-group-addon u-header__search-addon p-0">
+                    <button class="btn btn-primary u-header__search-addon-btn" type="button">
+                      <i class="fa fa-search"></i>
+                    </button>
+                  </div>
+                </form>
+                <!-- End Input -->
+              </li>
+              <!-- End Search -->
+            </ul>
+          </div>
+          <!-- End Navigation -->
+
+          <ul class="navbar-nav flex-row u-header__secondary-nav">
+       
+          </ul>
         </nav>
         <!-- End Nav -->
       </div>
@@ -51,85 +194,943 @@
   <!-- ========== MAIN CONTENT ========== -->
   <main id="content">
     <!-- Hero Section -->
-    <div class="bg-img-hero" style="background-image: url(assets/img/1920x1080/img17.###);">
-      <div class="d-sm-flex align-items-sm-center height-100vh--sm">
-        <div class="container text-center space-3-top space-2-bottom space-3-bottom--lg">
-          <div class="w-lg-60 text-center mx-lg-auto">
-            <!-- Title -->
-            <div class="mb-9">
-              <h1 class="display-3 font-size-48--md-down font-weight-medium">Expanded content coming soon</h1>
-              <p class="lead">Our website is under construction. We'll be here soon with our expanded content; thank you for your patience.</p>
-              <a href="#contact" class="btn-get-started">Contact Us</a>
+    <div class="js-slick-carousel u-slick"
+         data-infinite="true"
+         data-autoplay="true"
+         data-speed="8000"
+         data-fade="true"
+         data-adaptive-height="true"
+         data-arrows-classes="d-none d-lg-inline-block u-slick__arrow-classic u-slick__arrow-centered--y rounded-circle"
+         data-arrow-left-classes="fa fa-arrow-left u-slick__arrow-classic-inner u-slick__arrow-classic-inner--left ml-lg-2 ml-xl-4"
+         data-arrow-right-classes="fa fa-arrow-right u-slick__arrow-classic-inner u-slick__arrow-classic-inner--right mr-lg-2 mr-xl-4"
+         data-numbered-pagination="#slickPaging">
+      <!-- Slide #1 -->
+      <div class="js-slide">
+        <div class="d-md-flex align-items-md-center height-100vh--lg gradient-overlay-half-dark-v2 bg-img-hero" style="background-image: url(assets/img/1920x1080/img13.jpg);">
+          <div class="container text-center space-2 space-3--md">
+            <!-- Description -->
+            <div class="w-lg-80 mx-lg-auto mb-3">
+              <h1 class="display-3 font-size-48--md-down text-white"
+                  data-scs-animation-in="fadeInUp">We serve Homeowners Associations.</h1>
             </div>
-            <!-- End Title -->
-
+            <div class="w-lg-50 mx-lg-auto mb-7">
+              <p class="lead text-white"
+                 data-scs-animation-in="fadeInUp"
+                 data-scs-animation-delay="200">We are Certified Public Accountants dedicated to serving the common interest realty association industry.</p>
+            </div>
+            <div data-scs-animation-in="fadeInUp"
+                 data-scs-animation-delay="400">
+              <a class="btn btn-light" href="mailto:clientcare@ciratas.com?subject=Website inquiry&body=Hi, I'm reaching out to get started with CIRATAS.">Get Started with CIRATAS</a>
+            </div>
+            <!-- End Description -->
           </div>
         </div>
       </div>
+      <!-- End Slide #1 -->
+
+      <!-- Slide #2 -->
+      <div class="js-slide">
+        <div class="d-md-flex align-items-md-center height-100vh--lg gradient-overlay-half-dark-v2 bg-img-hero" style="background-image: url(assets/img/1920x1080/img14.jpg);">
+          <div class="container text-center space-2 space-3--md">
+            <!-- Description -->
+            <div class="w-lg-80 mx-lg-auto mb-3">
+              <h1 class="display-3 font-size-48--md-down text-white"
+                  data-scs-animation-in="fadeInUp">Certified Public Accountants</h1>
+            </div>
+            <div class="w-lg-50 mx-lg-auto mb-7">
+              <p class="lead text-white"
+                 data-scs-animation-in="fadeInUp"
+                 data-scs-animation-delay="200">Your association needs efficient tax services from experts. Our mission is to provide that for you.</p>
+            </div>
+            <div data-scs-animation-in="fadeInUp"
+                 data-scs-animation-delay="400">
+              <a class="btn btn-light" href="mailto:clientcare@ciratas.com?subject=Website inquiry&body=Hi, I'm reaching out to get started with CIRATAS.">Get Started with CIRATAS</a>
+            </div>
+            <!-- End Description -->
+          </div>
+        </div>
+      </div>
+      <!-- End Slide #2 -->
+
+      <!-- Slide #3 -->
+      <div class="js-slide">
+        <div class="d-md-flex align-items-md-center height-100vh--lg gradient-overlay-half-dark-v2 bg-img-hero" style="background-image: url(assets/img/1920x1080/img15.jpg);">
+          <div class="container text-center space-2 space-3--md">
+            <!-- Description -->
+            <div class="w-lg-80 mx-lg-auto mb-3">
+              <h1 class="display-3 font-size-48--md-down text-white"
+                  data-scs-animation-in="fadeInUp">Never lose track of your tax return again.</h1>
+            </div>
+            <div class="w-lg-50 mx-lg-auto mb-7">
+              <p class="lead text-white"
+                 data-scs-animation-in="fadeInUp"
+                 data-scs-animation-delay="200">Our proprietary app gives you real-time updates of your return status.</p>
+            </div>
+            <div data-scs-animation-in="fadeInUp"
+                 data-scs-animation-delay="400">
+              <a class="btn btn-light" href="mailto:clientcare@ciratas.com?subject=Website inquiry&body=Hi, I'm reaching out to get started with CIRATAS.">Get Started with CIRATAS</a>
+            </div>
+            <!-- End Description -->
+          </div>
+        </div>
+      </div>
+      <!-- End Slide #3 -->
     </div>
     <!-- End Hero Section -->
 
-  <main id="contact">
-    <!-- Contacts Section -->
+    <!-- Hero Slick Paging -->
+    <div class="container position-relative">
+      <div id="slickPaging" class="u-slick__paging-v1"></div>
+    </div>
+    <!-- End Hero Slick Paging -->
+
+    <!-- Features Section -->
     <div class="container space-2 space-3--lg">
-      <div class="row">
-        <div class="col-lg-6 mb-7 mb-lg-0">
-          <!-- Contacts Info -->
-          <h1 class="h4 mb-4">Colorado Springs</h1>
+      <!-- Title -->
+      <div class="w-md-80 w-lg-60 text-center mx-md-auto mb-9">
+        <span class="u-label u-label--sm u-label--purple mb-3">Key Firm Values</span>
+        <h2 class="h3">Specialized Services with Integrity</h2>
+        <p>CIRATAS exists to serve the managers and their associations within the HOA industry, more broadly, the Common Interest Realty Association (CIRA) industry, upholding our firm values.</p>
+      </div>
+      <!-- End Title -->
 
-          <div class="row">
-            <div class="col-sm-6 mb-4 mb-sm-0">
-              <h2 class="h6">Details:</h2>
-              <address class="mb-0">
-                <ul class="list-unstyled font-size-14 text-secondary mb-0">
-                  <li class="py-1">2812 W. Colorado Ave. Colorado Springs, CO 80904</li>
-                  <li class="py-2"></li>
-                  <li class="py-1">+1(719)922-0064</li>
-                  <li class="py-1">Email: <a href="mailto:clientcare@ciratas.com?subject=Website inquiry&body=Hi, I'm reaching out to learn more about a tax or other accounting need.">clientcare@ciratas.com</a></li>
-                  <li class="py-1">Website: <a href="#">ciratas.com</a></li>
-                </ul>
-              </address>
+      <div class="row justify-content-lg-between align-items-lg-center">
+        <div class="col-lg-5 mb-7 mb-lg-0">
+          <!-- Slick Carousel - Features Main -->
+          <div id="featuresSlickNavMain" class="js-slick-carousel u-slick u-slick--pagination-simple u-slick--transform-off"
+               data-infinite="true"
+               data-autoplay="true"
+               data-speed="7000"
+               data-slides-show="3"
+               data-adaptive-height="true"
+               data-vertical="true"
+               data-vertical-swiping="true"
+               data-focus-on-select="true"
+               data-nav-for="#featuresSlickNavThumb">
+            <!-- Slide Item -->
+            <div class="js-slide u-slick--pagination-simple__item">
+              <div class="media">
+                <span class="u-slick--pagination-simple__icon rounded-circle mr-3">
+                  <span class="u-slick--pagination-simple__icon-inner">1</span>
+                </span>
+                <div class="media-body">
+                  <h3 class="h6 u-slick--pagination-simple__title">Quality and integrity</h3>
+                  <p class="u-slick--pagination-simple__text">Our team of experts provide quality services and our values demand integrity.</p>
+                </div>
+              </div>
             </div>
+            <!-- End Slide Item -->
 
-            <div class="col-sm-6">
-              <h3 class="h6">Business hours:</h3>
-              <span class="d-block font-size-14 text-secondary mb-3">Mon - Fri: 8:00am - 05:00pm</span>
-              <img class="img-fluid" src="assets/img/400x180/img1.jpg" alt="Image Description">
+            <!-- Slide Item -->
+            <div class="js-slide u-slick--pagination-simple__item">
+              <div class="media">
+                <span class="u-slick--pagination-simple__icon rounded-circle mr-3">
+                  <span class="u-slick--pagination-simple__icon-inner">2</span>
+                </span>
+                <div class="media-body">
+                  <h4 class="h6 u-slick--pagination-simple__title">Commitment to serve</h4>
+                  <p class="u-slick--pagination-simple__text">Our team is committed to serving associations and their managers.</p>
+                </div>
+              </div>
             </div>
+            <!-- End Slide Item -->
+
+            <!-- Slide Item -->
+            <div class="js-slide u-slick--pagination-simple__item">
+              <div class="media">
+                <span class="u-slick--pagination-simple__icon rounded-circle mr-3">
+                  <span class="u-slick--pagination-simple__icon-inner">3</span>
+                </span>
+                <div class="media-body">
+                  <h4 class="h6 u-slick--pagination-simple__title">Specialization</h4>
+                  <p class="u-slick--pagination-simple__text">Our team specializes in serving homeowner associations.</p>
+                </div>
+              </div>
+            </div>
+            <!-- End Slide Item -->
           </div>
-          <!-- End Contacts Info -->
+          <!-- End Slick Carousel - Features Main -->
         </div>
 
         <div class="col-lg-6">
-          <!-- Google Map -->
-          <div id="GMap1" class="js-g-map embed-responsive embed-responsive-21by9 h-100"
-               data-type="custom"
-               data-lat="38.85062"
-               data-lng="-104.86750"
-               data-zoom="12"
-               data-title="CIRATAS"
-               data-styles='[["", "", [{"saturation":-100},{"lightness":51},{"visibility":"simplified"}]], ["", "labels", [{"visibility":"on"}]], ["water", "", [{"color":"#bac6cb"}]] ]'
-               data-pin="true"
-               data-pin-icon="assets/img/map-markers/map-marker1.png"></div>
-          <!-- End Google Map -->
+          <!-- Slick Carousel - Features Main -->
+          <div id="featuresSlickNavThumb" class="js-slick-carousel u-slick"
+               data-infinite="true"
+               data-autoplay="true"
+               data-speed="7000"
+               data-fade="true"
+               data-is-thumbs="true"
+               data-nav-for="#featuresSlickNavMain">
+            <div class="js-slide">
+              <object type="image/svg+xml" data="assets/svg/mockups/laptop-mockup-1.svg"></object>
+            </div>
+
+            <div class="js-slide">
+              <object type="image/svg+xml" data="assets/svg/mockups/laptop-mockup-2.svg"></object>
+            </div>
+
+            <div class="js-slide">
+              <object type="image/svg+xml" data="assets/svg/mockups/laptop-and-phone-2.svg"></object>
+            </div>
+          </div>
+          <!-- End Slick Carousel - Features Main -->
         </div>
       </div>
+    </div>
+    <!-- End Features Section -->
 
-      <hr class="my-9">
+    <!-- Icon Blocks Section -->
+    <div class="bg-gray-100">
+    <div class="container space-2 space-3--lg">
+      <!-- Title -->
+      <div class="w-md-80 w-lg-60 text-center mx-md-auto mb-9">
+        <span class="u-label u-label--sm u-label--purple mb-3">Why do you need CIRATAS?</span>
+        <h2 class="h3">Manage projects and see all at a glance with CIRATAS</h2>
+        <p>Manage your projects and stay organized.</p>
+      </div>
+      <!-- End Title -->
 
+      <div class="row">
+        <div class="col-sm-6 col-lg-4 offset-sm-3 offset-lg-0 mb-5 mb-lg-0">
+          <!-- Icon Block -->
+          <div class="text-center">
+            <h3 class="h5">
+              <a class="js-go-to" href="#"
+                 data-target="#managProjects"
+                 data-compensation="#header"
+                 data-type="static">
+                <img class="d-block max-width-12 mx-auto mb-3" src="assets/svg/components/manage-red-icon.svg" alt="SVG">
+                Request projects
+              </a>
+            </h3>
+          </div>
+          <!-- End Icon Block -->
+        </div>
+
+        <div class="col-sm-6 col-lg-4 mb-5 mb-sm-0">
+          <!-- Icon Block -->
+          <div class="text-center">
+            <h3 class="h5">
+              <a class="js-go-to" href="#"
+                 data-target="#monitorDetails"
+                 data-compensation="#header"
+                 data-type="static">
+                <img class="d-block max-width-12 mx-auto mb-3" src="assets/svg/components/file-blue-icon.svg" alt="SVG">
+                Monitor status
+              </a>
+            </h3>
+          </div>
+          <!-- End Icon Block -->
+        </div>
+
+        <div class="col-sm-6 col-lg-4">
+          <!-- Icon Block -->
+          <div class="text-center">
+            <h3 class="h5">
+              <a class="js-go-to" href="#"
+                 data-target="#measurePerformance"
+                 data-compensation="#header"
+                 data-type="static">
+                <img class="d-block max-width-12 mx-auto mb-3" src="assets/svg/components/measure-primary-icon.svg" alt="SVG">
+                Check it off your list
+              </a>
+            </h3>
+          </div>
+          <!-- End Icon Block -->
+        </div>
+      </div>
+    </div>
+    <!-- End Icon Blocks Section -->
+
+    <!-- Timeline Section -->
+    <div class="container space-2-top space-3-top--lg">
+      <!-- Title -->
+      <div class="w-md-80 w-lg-60 text-center mx-md-auto mb-9">
+        <span class="u-label u-label--sm u-label--purple mb-3">How Does it Work?</span>
+        <h2 class="h3">Getting started with CIRATAS</h2>
+        <p>Experience a level of quality and efficiency gained from serving the CIRA industry for over a decade.</p>
+      </div>
+      <!-- End Title -->
+
+      <!-- Timeline -->
+      <ul class="u-timeline">
+        <li class="u-timeline__item">
+          <div class="u-timeline__content">
+            <div class="media">
+              <span class="u-icon u-icon--primary u-icon--sm u-timeline__icon rounded-circle mr-3">
+                <span class="u-icon__inner">1</span>
+              </span>
+              <div class="media-body">
+                <h4 class="h5">Request</h4>
+                <p>This is where you submit a request with a general description of your need; if needed, we will request additional information to estimate the scope of work.</p>
+              </div>
+            </div>
+          </div>
+          <div class="u-timeline__info">
+            <img class="w-sm-50 w-lg-75 mx-lg-auto" src="assets/svg/components/planning-illustration.svg" alt="Image Description">
+          </div>
+          <div class="u-timeline__spacer"></div>
+        </li>
+
+        <li class="u-timeline__item">
+          <div class="u-timeline__content">
+            <div class="media">
+              <span class="u-icon u-icon--primary u-icon--sm u-timeline__icon rounded-circle mr-3">
+                <span class="u-icon__inner">2</span>
+              </span>
+              <div class="media-body">
+                <h4 class="h5">Gather and Engage</h4>
+                <p>Now that we've defined the scope of the project, we'll issue you an engagement letter based on the initial estimate. We will also request additional information to get us started. This part is crucial in keeping the project in line to completion.</p>
+              </div>
+            </div>
+          </div>
+          <div class="u-timeline__info">
+            <img class="w-sm-50 w-lg-75 mx-lg-auto" src="assets/svg/components/creation-process-illustration.svg" alt="Image Description">
+          </div>
+          <div class="u-timeline__spacer"></div>
+        </li>
+
+        <li class="u-timeline__item">
+          <div class="u-timeline__content">
+            <div class="media">
+              <span class="u-icon u-icon--primary u-icon--sm u-timeline__icon rounded-circle mr-3">
+                <span class="u-icon__inner">3</span>
+              </span>
+              <div class="media-body">
+                <h4 class="h5">Build</h4>
+                <p>Whether your request is for a tax return or a complex audit of financial statements, our team has the skills and expertise to build the project with professionalism.</p>
+              </div>
+            </div>
+          </div>
+          <div class="u-timeline__info">
+            <img class="w-sm-50 w-lg-75 mx-lg-auto" src="assets/svg/components/co-working-illustration.svg" alt="Image Description">
+          </div>
+          <div class="u-timeline__spacer"></div>
+        </li>
+
+        <li class="u-timeline__item">
+          <div class="u-timeline__content">
+            <div class="media">
+              <span class="u-icon u-icon--primary u-icon--sm u-timeline__icon rounded-circle mr-3">
+                <span class="u-icon__inner">4</span>
+              </span>
+              <div class="media-body">
+                <h4 class="h5">Release</h4>
+                <p>Now that we've built the project, you will have an opportunity to review a draft before we release the finalized version. Check it off the list.</p>
+              </div>
+            </div>
+          </div>
+          <div class="u-timeline__info">
+            <img class="w-sm-50 w-lg-75 mx-lg-auto" src="assets/svg/components/news-illustration.svg" alt="Image Description">
+          </div>
+          <div class="u-timeline__spacer"></div>
+        </li>
+      </ul>
+      <!-- End Timeline -->
+    </div>
+    <!-- End Timeline Section -->
+
+    <!-- CTA Section -->
+    <div class="container position-relative z-index-2 mb-n9">
+      <div class="w-md-80 w-lg-60 mx-md-auto">
+        <div class="bg-primary shadow-lg text-center rounded bg-img-hero p-9" style="background-image: url(assets/img/bg/bg2.png);">
+          <div class="mb-5">
+            <h2 class="h3 text-white">Ready to work with CIRATAS?</h2>
+            <p class="text-light">Let us guide you through our services and help you get started.</p>
+          </div>
+          <a class="btn btn-wide btn-light mb-1 mb-sm-0 mr-sm-2" href="mailto:clientcare@ciratas.com?subject=Website inquiry&body=Hi, I'm reaching out to get started with CIRATAS.">Get Started</a>
+
+        </div>
+      </div>
+    </div>
+    <!-- End CTA Section -->
+
+    <!-- FAQ Section -->
+    <div class="container space-2 space-3--lg">
+      <div class="row justify-content-lg-between">
+        <div class="col-lg-4 mb-7 mb-lg-0">
+          <!-- Info -->
+          <div class="bg-dark shadow-sm rounded p-5 mt-lg-9">
+            <h3 class="text-white">Have a question?</h3>
+            <p class="text-white-70">Call us: we are here to help.</p>
+
+            <address class="mb-0">
+              <span class="d-block text-white-70 font-weight-medium py-1">+1 (719) 299-5519</span>
+              <span class="d-block text-white-70 font-weight-light py-1">Monday - Friday</span>
+              <span class="d-block text-white-70 font-weight-light py-1">8AM - 5PM Mountain Time</span>
+              <span class="d-block text-white-70 font-weight-light py-1">Friday 1PM Close</span>
+            </address>
+          </div>
+          <!-- End Info -->
+        </div>
+
+        <div class="col-lg-7">
+          <!-- Title -->
+          <div class="mb-4">
+            <h2 class="h3">Frequently asked questions:</h2>
+          </div>
+          <!-- End Title -->
+
+          <!-- Accordion -->
+          <div class="mb-5" id="basicsAccordion">
+            <div class="card card-collapse mb-3">
+              <div class="card-header card-collapse__header" id="basicsHeadingOne">
+                <h5 class="mb-0">
+                  <button class="btn btn-link btn-block d-flex justify-content-between card-collapse__btn collapsed"
+                          data-toggle="collapse"
+                          data-target="#basicsCollapseOne"
+                          aria-expanded="false"
+                          aria-controls="basicsCollapseOne">
+                    Does my association need to file a tax return?
+
+                    <span class="card-collapse__btn-arrow">
+                      <i class="fa fa-arrow-down card-collapse__btn-arrow-inner"></i>
+                    </span>
+                  </button>
+                </h5>
+              </div>
+              <div id="basicsCollapseOne" class="collapse"
+                   aria-labelledby="basicsHeadingOne"
+                   data-parent="#basicsAccordion">
+                <div class="card-body card-collapse__body">
+                  Yes. Generally, homeowners associations must file an annual federal income tax return and a state income tax return. Our team helps you determine which Internal Revenue Code section is requried and/or most advantageous for your association.
+                </div>
+              </div>
+            </div>
+
+            <div class="card card-collapse mb-3">
+              <div class="card-header card-collapse__header" id="basicsHeadingTwo">
+                <h5 class="mb-0">
+                  <button class="btn btn-link btn-block d-flex justify-content-between card-collapse__btn collapsed"
+                          data-toggle="collapse"
+                          data-target="#basicsCollapseTwo"
+                          aria-expanded="false"
+                          aria-controls="basicsCollapseTwo">
+                    How long does it take?
+
+                    <span class="card-collapse__btn-arrow">
+                      <i class="fa fa-arrow-down card-collapse__btn-arrow-inner"></i>
+                    </span>
+                  </button>
+                </h5>
+              </div>
+              <div id="basicsCollapseTwo" class="collapse"
+                   aria-labelledby="basicsHeadingTwo"
+                   data-parent="#basicsAccordion">
+                <div class="card-body card-collapse__body">
+                  Regardless of the level of service (i.e. tax returns, audit, consultation, etc.), typically, the largest factor impacting the timing of delivery is usually the flow of necessary information. The quicker we get information, the quicker we can delivery your project. Our proprietary app alerts you when a project is on-hold due to missing information.
+                </div>
+              </div>
+            </div>
+
+            <div class="card card-collapse mb-3">
+              <div class="card-header card-collapse__header" id="basicsHeadingThree">
+                <h5 class="mb-0">
+                  <button class="btn btn-link btn-block d-flex justify-content-between card-collapse__btn collapsed"
+                          data-toggle="collapse"
+                          data-target="#basicsCollapseThree"
+                          aria-expanded="false"
+                          aria-controls="basicsCollapseThree">
+                    Why does my association owe tax? Aren't we a non-profit organization?
+
+                    <span class="card-collapse__btn-arrow">
+                      <i class="fa fa-arrow-down card-collapse__btn-arrow-inner"></i>
+                    </span>
+                  </button>
+                </h5>
+              </div>
+              <div id="basicsCollapseThree" class="collapse"
+                   aria-labelledby="basicsHeadingThree"
+                   data-parent="#basicsAccordion">
+                <div class="card-body card-collapse__body">
+                  This answer can be complex; the classic tax-related response applies here: it depends. Most residential associations are not technically "exempt organizations" in the eyes of the IRS and file under Section 528 of the Internal Revenue Code (IRC). This Section allows for filing the simpler Form 1120-H; but, it requires delineation between exempt and non-exempt type income. Some associations, including commercial associations, may not qualify for filing under Section 528 and instead file under Section 277 of the IRC. Our CIRATAS team optimizes the filing for your association.
+                </div>
+              </div>
+            </div>
+
+            <div class="card card-collapse">
+              <div class="card-header card-collapse__header" id="basicsHeadingFour">
+                <h5 class="mb-0">
+                  <button class="btn btn-link btn-block d-flex justify-content-between card-collapse__btn collapsed"
+                          data-toggle="collapse"
+                          data-target="#basicsCollapseFour"
+                          aria-expanded="false"
+                          aria-controls="basicsCollapseFour">
+                    What's the difference between an audit and a review of our financial statments?
+
+                    <span class="card-collapse__btn-arrow">
+                      <i class="fa fa-arrow-down card-collapse__btn-arrow-inner"></i>
+                    </span>
+                  </button>
+                </h5>
+              </div>
+              <div id="basicsCollapseFour" class="collapse"
+                   aria-labelledby="basicsHeadingFour"
+                   data-parent="#basicsAccordion">
+                <div class="card-body card-collapse__body">
+                  In accountant-speak, an audit provides reasonable assurance that the financial statements presented are free of material misstatement according to accounting principles generally accepted in the United States of America; whereas, a review provides limited assurance of the same. In practical terms, a review engagement will produce similar looking financial statements, including notes to financial statements, but there is less work required for the accountant to report on these.
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- End Accordion -->
+
+        </div>
+      </div>
+    </div>
+    <!-- End FAQ Section -->
 
   </main>
   <!-- ========== END MAIN CONTENT ========== -->
 
   <!-- ========== FOOTER ========== -->
-  <footer class="position-absolute-bottom-0--sm">
-    <div class="container text-center space-1">
-      <p class="small mb-0">&copy; CIRATAS 2021</p>
+  <footer class="bg-dark">
+    <div class="container space-2">
+      <div class="row justify-content-md-between">
+        <div class="col-6 col-md-3 col-lg-2 order-lg-3 mb-7 mb-lg-0">
+          <h3 class="h6 text-white mb-3">CIRATAS</h3>
+
+          <!-- End List -->
+        </div>
+
+        <div class="col-lg-4 order-lg-1 d-flex align-items-start flex-column">
+          <!-- Logo -->
+          <a class="d-inline-block mb-5" href="index.html" aria-label="Space">
+            <img src="assets/svg/logos/logo-short-white.svg" alt="Logo" style="width: 40px; max-width: 100%;">
+          </a>
+          <!-- End Logo -->
+
+
+          <p class="small text-muted">All rights reserved. &copy; CIRATAS.</p>
+        </div>
+      </div>
     </div>
   </footer>
   <!-- ========== END FOOTER ========== -->
 
+  <!-- ========== SECONDARY CONTENTS ========== -->
+  <!-- Panel Sidebar Navigation -->
+  <aside id="sidebarContent" class="u-sidebar u-unfold--css-animation u-unfold--hidden" aria-labelledby="sidebarNavToggler">
+    <div class="u-sidebar__scroller">
+      <div class="u-sidebar__container">
+        <div class="u-sidebar--panel__footer-offset">
+          <!-- Toggle Button -->
+          <div class="d-flex align-items-center border-bottom py-4 px-5">
+            <h4 class="h5 mb-0">Account</h4>
 
+            <button type="button" class="close u-sidebar__close ml-auto"
+                    aria-controls="sidebarContent"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                    data-unfold-event="click"
+                    data-unfold-hide-on-scroll="false"
+                    data-unfold-target="#sidebarContent"
+                    data-unfold-type="css-animation"
+                    data-unfold-animation-in="fadeInRight"
+                    data-unfold-animation-out="fadeOutRight"
+                    data-unfold-duration="500">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <!-- End Toggle Button -->
+
+          <!-- Content -->
+          <div class="js-scrollbar u-sidebar__body">
+            <div class="u-sidebar__content py-5">
+              <!-- Title -->
+              <div class="py-2 px-5">
+                <h4 class="text-uppercase text-muted font-size-13 mb-0">Menu label</h4>
+              </div>
+              <!-- End Title -->
+
+              <!-- List -->
+              <ul class="list-unstyled font-size-14 mb-5">
+                <li>
+                  <a class="media align-items-center u-sidebar--panel__link py-2 px-5" href="#">
+                    <img class="max-width-4 mr-3" src="assets/svg/components/finance-dark-icon.svg" alt="Image Description">
+                    <div class="media-body">
+                      <span>Dashboard</span>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a class="media align-items-center u-sidebar--panel__link py-2 px-5" href="#">
+                    <img class="max-width-4 mr-3" src="assets/svg/components/touch-dark-icon.svg" alt="Image Description">
+                    <div class="media-body">
+                      <span>Activity</span>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a class="media align-items-center u-sidebar--panel__link py-2 px-5" href="#">
+                    <img class="max-width-4 mr-3" src="assets/svg/components/team-dark-icon.svg" alt="Image Description">
+                    <div class="media-body">
+                      <span>Team</span>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a class="media align-items-center u-sidebar--panel__link py-2 px-5" href="#">
+                    <img class="max-width-4 mr-3" src="assets/svg/components/email-dark-icon.svg" alt="Image Description">
+                    <div class="media-body">
+                      <span>Mailbox</span>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a class="media align-items-center u-sidebar--panel__link py-2 px-5" href="#">
+                    <img class="max-width-4 mr-3" src="assets/svg/components/projects-dark-icon.svg" alt="Image Description">
+                    <div class="media-body">
+                      <span>Projects</span>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+              <!-- End List -->
+
+              <!-- Title -->
+              <div class="py-2 px-5">
+                <h4 class="text-uppercase text-muted font-size-13 mb-0">Sub level</h4>
+              </div>
+              <!-- End Title -->
+
+              <!-- List -->
+              <ul class="list-unstyled font-size-14 mb-0">
+                <li>
+                  <a class="media align-items-center u-sidebar--panel__link py-2 px-5" href="#">
+                    <img class="max-width-4 mr-3" src="assets/svg/components/calendar-dark-icon.svg" alt="Image Description">
+                    <div class="media-body">
+                      <span>Calendar</span>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a class="media align-items-center u-sidebar--panel__link py-2 px-5" href="#">
+                    <img class="max-width-4 mr-3" src="assets/svg/components/cog-dark-icon.svg" alt="Image Description">
+                    <div class="media-body">
+                      <span>Tools</span>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a class="media align-items-center u-sidebar--panel__link py-2 px-5" href="#">
+                    <img class="max-width-4 mr-3" src="assets/svg/components/archive-dark-icon.svg" alt="Image Description">
+                    <div class="media-body">
+                      <span>Archive</span>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+              <!-- End List -->
+            </div>
+          </div>
+          <!-- End Content -->
+        </div>
+
+        <!-- Footer -->
+        <footer class="u-sidebar__footer u-sidebar__footer--panel py-4 px-5">
+          <!-- List -->
+          <ul class="list-inline font-size-14 mb-0">
+            <li class="list-inline-item">
+              <a class="u-sidebar--panel__link pr-2" href="../pages/privacy.html">Privacy</a>
+            </li>
+            <li class="list-inline-item">
+              <a class="u-sidebar--panel__link px-2" href="../pages/terms.html">Terms</a>
+            </li>
+            <li class="list-inline-item">
+              <a class="u-sidebar--panel__link pl-2" href="../pages/help.html">
+                <i class="fa fa-info-circle"></i>
+              </a>
+            </li>
+          </ul>
+          <!-- End List -->
+        </footer>
+        <!-- End Footer -->
+      </div>
+    </div>
+  </aside>
+  <!-- End Panel Sidebar Navigation -->
+
+  <!-- Signup Modal Window -->
+  <div id="signupModal" class="js-signup-modal u-modal-window" style="width: 500px;">
+    <!-- Modal Close Button -->
+    <button class="btn btn-sm btn-icon btn-text-secondary u-modal-window__close" type="button" onclick="Custombox.modal.close();">
+      <i class="fas fa-times"></i>
+    </button>
+    <!-- End Modal Close Button -->
+
+    <!-- Content -->
+    <div class="p-5 bg-white rounded">
+      <form class="js-validate">
+        <!-- Signin -->
+        <div id="signin" data-target-group="idForm">
+          <!-- Title -->
+          <header class="text-center mb-5">
+            <h2 class="h4 mb-0">Please sign in</h2>
+            <p>Signin to manage your account.</p>
+          </header>
+          <!-- End Title -->
+
+          <!-- Input -->
+          <div class="js-form-message mb-3">
+            <div class="js-focus-state input-group form">
+              <div class="input-group-prepend form__prepend">
+                <span class="input-group-text form__text">
+                  <i class="fa fa-user form__text-inner"></i>
+                </span>
+              </div>
+              <input type="email" class="form-control form__input" name="email" required
+                     placeholder="Email"
+                     aria-label="Email"
+                     data-msg="Please enter a valid email address."
+                     data-error-class="u-has-error"
+                     data-success-class="u-has-success">
+            </div>
+          </div>
+          <!-- End Input -->
+
+          <!-- Input -->
+          <div class="js-form-message mb-3">
+            <div class="js-focus-state input-group form">
+              <div class="input-group-prepend form__prepend">
+                <span class="input-group-text form__text">
+                  <i class="fa fa-lock form__text-inner"></i>
+                </span>
+              </div>
+              <input type="password" class="form-control form__input" name="password" required
+                     placeholder="Password"
+                     aria-label="Password"
+                     data-msg="Your password is invalid. Please try again."
+                     data-error-class="u-has-error"
+                     data-success-class="u-has-success">
+            </div>
+          </div>
+          <!-- End Input -->
+
+          <div class="row mb-3">
+            <div class="col-6">
+              <!-- Checkbox -->
+              <div class="custom-control custom-checkbox d-flex align-items-center text-muted">
+                <input type="checkbox" class="custom-control-input" id="rememberMeCheckbox">
+                <label class="custom-control-label" for="rememberMeCheckbox">
+                  Remember Me
+                </label>
+              </div>
+              <!-- End Checkbox -->
+            </div>
+
+            <div class="col-6 text-right">
+              <a class="js-animation-link float-right" href="javascript:;"
+                 data-target="#forgotPassword"
+                 data-link-group="idForm"
+                 data-animation-in="fadeIn">Forgot Password?</a>
+            </div>
+          </div>
+
+          <div class="mb-3">
+            <button type="submit" class="btn btn-block btn-primary">Signin</button>
+          </div>
+
+          <div class="text-center mb-3">
+            <p class="text-muted">
+              Do not have an account?
+              <a class="js-animation-link" href="javascript:;"
+                 data-target="#signup"
+                 data-link-group="idForm"
+                 data-animation-in="fadeIn">Signup
+              </a>
+            </p>
+          </div>
+
+          <!-- Divider -->
+          <div class="text-center u-divider-wrapper my-3">
+            <span class="u-divider u-divider--xs u-divider--text">OR</span>
+          </div>
+          <!-- End Divider -->
+
+          <!-- Signin Social Buttons -->
+          <div class="row mx-gutters-2 mb-4">
+            <div class="col-sm-6 mb-2 mb-sm-0">
+              <button type="button" class="btn btn-block btn-facebook text-nowrap">
+                <i class="fab fa-facebook-f mr-2"></i>
+                Signin with Facebook
+              </button>
+            </div>
+            <div class="col-sm-6">
+              <button type="button" class="btn btn-block btn-twitter">
+                <i class="fab fa-twitter mr-2"></i>
+                Signin with Twitter
+              </button>
+            </div>
+          </div>
+          <!-- End Signin Social Buttons -->
+        </div>
+        <!-- End Signin -->
+
+        <!-- Signup -->
+        <div id="signup" style="display: none; opacity: 0;" data-target-group="idForm">
+          <!-- Title -->
+          <header class="text-center mb-5">
+            <h2 class="h4 mb-0">Please sign up</h2>
+            <p>Fill out the form to get started.</p>
+          </header>
+          <!-- End Title -->
+
+          <!-- Input -->
+          <div class="js-form-message mb-3">
+            <div class="js-focus-state input-group form">
+              <div class="input-group-prepend form__prepend">
+                <span class="input-group-text form__text">
+                  <i class="fa fa-user form__text-inner"></i>
+                </span>
+              </div>
+              <input type="email" class="form-control form__input" name="email" required
+                     placeholder="Email"
+                     aria-label="Email"
+                     data-msg="Please enter a valid email address."
+                     data-error-class="u-has-error"
+                     data-success-class="u-has-success">
+            </div>
+          </div>
+          <!-- End Input -->
+
+          <!-- Input -->
+          <div class="js-form-message mb-3">
+            <div class="js-focus-state input-group form">
+              <div class="input-group-prepend form__prepend">
+                <span class="input-group-text form__text">
+                  <i class="fa fa-lock form__text-inner"></i>
+                </span>
+              </div>
+              <input type="password" class="form-control form__input" name="password" id="password" required
+                     placeholder="Password"
+                     aria-label="Password"
+                     data-msg="Your password is invalid. Please try again."
+                     data-error-class="u-has-error"
+                     data-success-class="u-has-success">
+            </div>
+          </div>
+          <!-- End Input -->
+
+          <!-- Input -->
+          <div class="js-form-message mb-3">
+            <div class="js-focus-state input-group form">
+              <div class="input-group-prepend form__prepend">
+                <span class="input-group-text form__text">
+                  <i class="fa fa-key form__text-inner"></i>
+                </span>
+              </div>
+              <input type="password" class="form-control form__input" name="confirmPassword" required
+                     placeholder="Confirm Password"
+                     aria-label="Confirm Password"
+                     data-msg="Password does not match the confirm password."
+                     data-error-class="u-has-error"
+                     data-success-class="u-has-success">
+            </div>
+          </div>
+          <!-- End Input -->
+
+          <div class="mb-3">
+            <button type="submit" class="btn btn-block btn-primary">Signup</button>
+          </div>
+
+          <div class="text-center mb-3">
+            <p class="text-muted">
+              Have an account?
+              <a class="js-animation-link" href="javascript:;"
+                 data-target="#signin"
+                 data-link-group="idForm"
+                 data-animation-in="fadeIn">Signin
+              </a>
+            </p>
+          </div>
+
+          <!-- Divider -->
+          <div class="text-center u-divider-wrapper my-3">
+            <span class="u-divider u-divider--xs u-divider--text">OR</span>
+          </div>
+          <!-- End Divider -->
+
+          <!-- Signup Social Buttons -->
+          <div class="row mx-gutters-2 mb-4">
+            <div class="col-sm-6 mb-2 mb-sm-0">
+              <button type="button" class="btn btn-block btn-facebook text-nowrap">
+                <i class="fab fa-facebook-f mr-2"></i>
+                Signup with Facebook
+              </button>
+            </div>
+            <div class="col-sm-6">
+              <button type="button" class="btn btn-block btn-twitter">
+                <i class="fab fa-twitter mr-2"></i>
+                Signup with Twitter
+              </button>
+            </div>
+          </div>
+          <!-- End Signup Social Buttons -->
+        </div>
+        <!-- End Signup -->
+
+        <!-- Forgot Password -->
+        <div id="forgotPassword" style="display: none; opacity: 0;" data-target-group="idForm">
+          <!-- Title -->
+          <header class="text-center mb-5">
+            <h2 class="h4 mb-0">Recover account</h2>
+            <p>Enter your email address and an email with instructions will be sent to you.</p>
+          </header>
+          <!-- End Title -->
+
+          <!-- Input -->
+          <div class="js-form-message mb-3">
+            <div class="js-focus-state input-group form">
+              <div class="input-group-prepend form__prepend">
+                <span class="input-group-text form__text">
+                  <i class="fa fa-user form__text-inner"></i>
+                </span>
+              </div>
+              <input type="email" class="form-control form__input" name="email" required
+                     placeholder="Email"
+                     aria-label="Email"
+                     data-msg="Please enter a valid email address."
+                     data-error-class="u-has-error"
+                     data-success-class="u-has-success">
+            </div>
+          </div>
+          <!-- End Input -->
+
+          <div class="mb-3">
+            <button type="submit" class="btn btn-block btn-primary">Recover Account</button>
+          </div>
+
+          <div class="text-center mb-3">
+            <p class="text-muted">
+              Have an account?
+              <a class="js-animation-link" href="javascript:;"
+                 data-target="#signin"
+                 data-link-group="idForm"
+                 data-animation-in="fadeIn">Signin
+              </a>
+            </p>
+          </div>
+        </div>
+        <!-- End Forgot Password -->
+      </form>
+    </div>
+    <!-- End Content -->
+  </div>
+  <!-- End Signup Modal Window -->
+  <!-- ========== END SECONDARY CONTENTS ========== -->
+
+  <!-- Go to Top -->
+  <a class="js-go-to u-go-to" href="javascript:;"
+    data-position='{"bottom": 15, "right": 15 }'
+    data-type="fixed"
+    data-offset-top="400"
+    data-compensation="#header"
+    data-show-effect="slideInUp"
+    data-hide-effect="slideOutDown">
+    <i class="fa fa-arrow-up u-go-to__inner"></i>
+  </a>
+  <!-- End Go to Top -->
 
   <!-- JS Global Compulsory -->
   <script src="assets/vendor/jquery/dist/jquery.min.js"></script>
@@ -138,44 +1139,88 @@
   <script src="assets/vendor/bootstrap/bootstrap.min.js"></script>
 
   <!-- JS Implementing Plugins -->
+  <script src="assets/vendor/hs-megamenu/src/hs.megamenu.js"></script>
   <script src="assets/vendor/jquery-validation/dist/jquery.validate.min.js"></script>
+  <script src="assets/vendor/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js"></script>
   <script src="assets/vendor/custombox/dist/custombox.min.js"></script>
   <script src="assets/vendor/custombox/dist/custombox.legacy.min.js"></script>
-  <script src="assets/vendor/jquery.countdown.min.js"></script>
+  <script src="assets/vendor/slick-carousel/slick/slick.js"></script>
+  <script src="assets/vendor/fancybox/jquery.fancybox.min.js"></script>
+  <script src="assets/vendor/player.js/dist/player.min.js"></script>
 
   <!-- JS Space -->
   <script src="assets/js/hs.core.js"></script>
+  <script src="assets/js/components/hs.header.js"></script>
+  <script src="assets/js/components/hs.unfold.js"></script>
   <script src="assets/js/components/hs.validation.js"></script>
   <script src="assets/js/helpers/hs.focus-state.js"></script>
+  <script src="assets/js/components/hs.malihu-scrollbar.js"></script>
   <script src="assets/js/components/hs.modal-window.js"></script>
   <script src="assets/js/components/hs.show-animation.js"></script>
-  <script src="assets/js/components/hs.countdown.js"></script>
+  <script src="assets/js/components/hs.slick-carousel.js"></script>
+  <script src="assets/js/components/hs.fancybox.js"></script>
+  <script src="assets/js/components/hs.video-player.js"></script>
+  <script src="assets/js/components/hs.go-to.js"></script>
 
   <!-- JS Plugins Init. -->
   <script>
+    $(window).on('load', function () {
+      // initialization of HSMegaMenu component
+      $('.js-mega-menu').HSMegaMenu({
+        event: 'hover',
+        pageContainer: $('.container'),
+        breakpoint: 991,
+        hideTimeOut: 0
+      });
+    });
+
     $(document).on('ready', function () {
+      // initialization of header
+      $.HSCore.components.HSHeader.init($('#header'));
+
+      // initialization of unfold component
+      $.HSCore.components.HSUnfold.init($('[data-unfold-target]'), {
+        afterOpen: function () {
+          if (!$('body').hasClass('IE11')) {
+            $(this).find('input[type="search"]').focus();
+          }
+        }
+      });
+
       // initialization of form validation
-      $.HSCore.components.HSValidation.init('.js-validate');
+      $.HSCore.components.HSValidation.init('.js-validate', {
+        rules: {
+          confirmPassword: {
+            equalTo: '#password'
+          }
+        }
+      });
 
       // initialization of forms
       $.HSCore.helpers.HSFocusState.init();
 
+      // initialization of malihu scrollbar
+      $.HSCore.components.HSMalihuScrollBar.init($('.js-scrollbar'));
+
       // initialization of autonomous popups
-      $.HSCore.components.HSModalWindow.init('[data-modal-target]', '.js-subscribe-for-updates', {
+      $.HSCore.components.HSModalWindow.init('[data-modal-target]', '.js-signup-modal', {
         autonomous: true
       });
 
       // initialization of show animations
       $.HSCore.components.HSShowAnimation.init('.js-animation-link');
 
-      // initialization of countdowns
-      var countdowns = $.HSCore.components.HSCountdown.init('.js-countdown', {
-        yearsElSelector: '.js-cd-years',
-        daysElSelector: '.js-cd-days',
-        hoursElSelector: '.js-cd-hours',
-        minutesElSelector: '.js-cd-minutes',
-        secondsElSelector: '.js-cd-seconds'
-      });
+      // initialization of slick carousel
+      $.HSCore.components.HSSlickCarousel.init('.js-slick-carousel');
+
+      // initialization of fancybox
+      $.HSCore.components.HSFancyBox.init('.js-fancybox');
+
+      // initialization of video player
+      $.HSCore.components.HSVideoPlayer.init('.js-inline-video-player');
+
+      // initialization of go to
+      $.HSCore.components.HSGoTo.init('.js-go-to');
     });
   </script>
 </body>
